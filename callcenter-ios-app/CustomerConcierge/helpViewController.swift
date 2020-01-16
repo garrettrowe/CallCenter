@@ -33,13 +33,14 @@ class ViewController: UIViewController, PKPushRegistryDelegate, TVONotificationD
     
     func defaultsChanged(notification:NSNotification){
         if let newDefaults = notification.object as? UserDefaults {
-            yourPhone = newDefaults.string(forKey: "yourPhone")!
-            agentPhone = newDefaults.string(forKey: "agentPhone")!
-            industry = newDefaults.string(forKey: "subIndustry")!
+            yourPhone = newDefaults.string(forKey: "yourPhone")!.trim()
+            agentPhone = newDefaults.string(forKey: "agentPhone")!.trim()
+            industry = newDefaults.string(forKey: "subIndustry")!.trim()
             loadPage()
         }
     }
     func loadPage() {
+        NSLog("Loading Web Content")
         let url = URL(string: "https://customerconcierge.mybluemix.net/demo?yourPhone=" + yourPhone + "&agentPhone=" + agentPhone + "&industry=" + industry)!
         let urlRequest: URLRequest = URLRequest(url: url)
             self.watsonWeb!.loadRequest(urlRequest)
@@ -76,7 +77,7 @@ class ViewController: UIViewController, PKPushRegistryDelegate, TVONotificationD
         callKitCallController = CXCallController()
 
         super.init(coder: aDecoder)
-
+        
         callKitProvider.setDelegate(self, queue: nil)
         
         voipRegistry.delegate = self
@@ -95,9 +96,9 @@ class ViewController: UIViewController, PKPushRegistryDelegate, TVONotificationD
         
     }
     override func viewDidLoad() {
-        yourPhone = defaults.string(forKey: "yourPhone")!
-        agentPhone = defaults.string(forKey: "agentPhone")!
-        industry = defaults.string(forKey: "subIndustry")!
+        yourPhone = defaults.string(forKey: "yourPhone")!.trim()
+        agentPhone = defaults.string(forKey: "agentPhone")!.trim()
+        industry = defaults.string(forKey: "subIndustry")!.trim()
         watsonWeb?.delegate = self
         loadPage()
         

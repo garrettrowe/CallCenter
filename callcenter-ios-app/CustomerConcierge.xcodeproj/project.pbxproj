@@ -8,37 +8,53 @@
 
 /* Begin PBXBuildFile section */
 		24BA34371D874AC800B0B4F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA34361D874AC800B0B4F7 /* AppDelegate.swift */; };
-		24BA34391D874AC800B0B4F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA34381D874AC800B0B4F7 /* ViewController.swift */; };
+		24BA34391D874AC800B0B4F7 /* helpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA34381D874AC800B0B4F7 /* helpViewController.swift */; };
 		24BA343C1D874AC800B0B4F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24BA343A1D874AC800B0B4F7 /* Main.storyboard */; };
 		24BA343E1D874AC800B0B4F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24BA343D1D874AC800B0B4F7 /* Assets.xcassets */; };
 		24BA34491D874BBD00B0B4F7 /* TwilioLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 24BA34481D874BBD00B0B4F7 /* TwilioLogo.png */; };
-		3C210BD620CF8CF50041E835 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C210BD520CF8CF50041E835 /* Launch Screen.storyboard */; };
+		3C210BD620CF8CF50041E835 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C210BD520CF8CF50041E835 /* Launch.storyboard */; };
 		3C210BD820CF8D740041E835 /* watson_lg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C210BD720CF8D730041E835 /* watson_lg.png */; };
 		3C6BB1FE20C990E400B2A630 /* microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BB1FC20C990E400B2A630 /* microphone.png */; };
 		3C6BB1FF20C990E400B2A630 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BB1FD20C990E400B2A630 /* close.png */; };
 		3C6BB20120C9AB8100B2A630 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BB20020C9AB8100B2A630 /* Settings.bundle */; };
+		3C75F0EB20E1479C00B9A634 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F0EA20E1479C00B9A634 /* utils.swift */; };
+		3C75F0ED20E2C3EF00B9A634 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F0EC20E2C3EF00B9A634 /* TabBarController.swift */; };
+		3C75F0EF20E2D02700B9A634 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F0EE20E2D02700B9A634 /* mainViewController.swift */; };
+		3C75F0F720E54E8F00B9A634 /* online_support.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C75F0F620E54E8F00B9A634 /* online_support.png */; };
+		3C75F0F920E54E9B00B9A634 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C75F0F820E54E9B00B9A634 /* home.png */; };
+		3C75F0FB20E9C35400B9A634 /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C75F0FA20E9C35400B9A634 /* pencil.png */; };
+		3C75F0FD20E9C3AE00B9A634 /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C75F0FC20E9C3AD00B9A634 /* chat.png */; };
+		3C75F10120E9C7EC00B9A634 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C75F10020E9C7EC00B9A634 /* cancel.png */; };
 		3C795A8B20C856CD006F28B4 /* watson.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C795A8A20C856CD006F28B4 /* watson.png */; };
-		B70194AB7ACD5EC4DBEB8DB8 /* Pods_TwilioVoice_SwiftVoiceCallKitQuickstart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77567DB322E1CF9813DABF8E /* Pods_TwilioVoice_SwiftVoiceCallKitQuickstart.framework */; };
+		61B8DA4FE0B8E0C8B8A9DA13 /* Pods_CustomerConcierge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A308470707FFA8676E9BA04 /* Pods_CustomerConcierge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		24BA34331D874AC800B0B4F7 /* CustomerConcierge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomerConcierge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A308470707FFA8676E9BA04 /* Pods_CustomerConcierge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomerConcierge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24BA34331D874AC800B0B4F7 /* CustomerConcierge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = CustomerConcierge.app; path = ConciergeTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24BA34361D874AC800B0B4F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		24BA34381D874AC800B0B4F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		24BA34381D874AC800B0B4F7 /* helpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpViewController.swift; sourceTree = "<group>"; };
 		24BA343B1D874AC800B0B4F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24BA343D1D874AC800B0B4F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24BA34421D874AC800B0B4F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24BA34481D874BBD00B0B4F7 /* TwilioLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwilioLogo.png; sourceTree = "<group>"; };
 		24BA344A1D874D2B00B0B4F7 /* CustomerConcierge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CustomerConcierge.entitlements; sourceTree = "<group>"; };
-		3C210BD520CF8CF50041E835 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		3C210BD520CF8CF50041E835 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		3C210BD720CF8D730041E835 /* watson_lg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watson_lg.png; sourceTree = "<group>"; };
 		3C6BB1FC20C990E400B2A630 /* microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microphone.png; sourceTree = "<group>"; };
 		3C6BB1FD20C990E400B2A630 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		3C6BB20020C9AB8100B2A630 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		3C75F0EA20E1479C00B9A634 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		3C75F0EC20E2C3EF00B9A634 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		3C75F0EE20E2D02700B9A634 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		3C75F0F620E54E8F00B9A634 /* online_support.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = online_support.png; sourceTree = "<group>"; };
+		3C75F0F820E54E9B00B9A634 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		3C75F0FA20E9C35400B9A634 /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
+		3C75F0FC20E9C3AD00B9A634 /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
+		3C75F10020E9C7EC00B9A634 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		3C795A8A20C856CD006F28B4 /* watson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watson.png; sourceTree = "<group>"; };
-		77567DB322E1CF9813DABF8E /* Pods_TwilioVoice_SwiftVoiceCallKitQuickstart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwilioVoice_SwiftVoiceCallKitQuickstart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2D032A1E426A1144E100117 /* Pods-TwilioVoice-SwiftVoiceCallKitQuickstart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwilioVoice-SwiftVoiceCallKitQuickstart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwilioVoice-SwiftVoiceCallKitQuickstart/Pods-TwilioVoice-SwiftVoiceCallKitQuickstart.debug.xcconfig"; sourceTree = "<group>"; };
-		F49E3D865BB3A21AF2F20167 /* Pods-TwilioVoice-SwiftVoiceCallKitQuickstart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwilioVoice-SwiftVoiceCallKitQuickstart.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwilioVoice-SwiftVoiceCallKitQuickstart/Pods-TwilioVoice-SwiftVoiceCallKitQuickstart.release.xcconfig"; sourceTree = "<group>"; };
+		7A212AF5C67BF2E3AA09CC0E /* Pods-CustomerConcierge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomerConcierge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomerConcierge/Pods-CustomerConcierge.debug.xcconfig"; sourceTree = "<group>"; };
+		9B3AB0F167503B99440EF081 /* Pods-CustomerConcierge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomerConcierge.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomerConcierge/Pods-CustomerConcierge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B70194AB7ACD5EC4DBEB8DB8 /* Pods_TwilioVoice_SwiftVoiceCallKitQuickstart.framework in Frameworks */,
+				61B8DA4FE0B8E0C8B8A9DA13 /* Pods_CustomerConcierge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,8 +74,8 @@
 			children = (
 				24BA34351D874AC800B0B4F7 /* CustomerConcierge */,
 				24BA34341D874AC800B0B4F7 /* Products */,
-				55E4DD2B129E858377D08E95 /* Pods */,
-				45B8A87752EE385BD0514D8C /* Frameworks */,
+				324AF340C6E9FC0E2107E8B6 /* Pods */,
+				5A1630DFBDB3E71F2A98C375 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,54 +95,61 @@
 				3C6BB1FC20C990E400B2A630 /* microphone.png */,
 				24BA344A1D874D2B00B0B4F7 /* CustomerConcierge.entitlements */,
 				24BA34361D874AC800B0B4F7 /* AppDelegate.swift */,
-				24BA34381D874AC800B0B4F7 /* ViewController.swift */,
+				24BA34381D874AC800B0B4F7 /* helpViewController.swift */,
+				3C75F0EE20E2D02700B9A634 /* mainViewController.swift */,
+				3C75F0EC20E2C3EF00B9A634 /* TabBarController.swift */,
 				3C6BB20020C9AB8100B2A630 /* Settings.bundle */,
 				24BA343A1D874AC800B0B4F7 /* Main.storyboard */,
 				24BA343D1D874AC800B0B4F7 /* Assets.xcassets */,
 				24BA34421D874AC800B0B4F7 /* Info.plist */,
 				3C795A8A20C856CD006F28B4 /* watson.png */,
+				3C75F0F620E54E8F00B9A634 /* online_support.png */,
+				3C75F0FC20E9C3AD00B9A634 /* chat.png */,
+				3C75F0FA20E9C35400B9A634 /* pencil.png */,
 				24BA34481D874BBD00B0B4F7 /* TwilioLogo.png */,
-				3C210BD520CF8CF50041E835 /* Launch Screen.storyboard */,
+				3C75F10020E9C7EC00B9A634 /* cancel.png */,
+				3C75F0F820E54E9B00B9A634 /* home.png */,
+				3C210BD520CF8CF50041E835 /* Launch.storyboard */,
+				3C75F0EA20E1479C00B9A634 /* utils.swift */,
 			);
 			path = CustomerConcierge;
 			sourceTree = "<group>";
 		};
-		45B8A87752EE385BD0514D8C /* Frameworks */ = {
+		324AF340C6E9FC0E2107E8B6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				77567DB322E1CF9813DABF8E /* Pods_TwilioVoice_SwiftVoiceCallKitQuickstart.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		55E4DD2B129E858377D08E95 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A2D032A1E426A1144E100117 /* Pods-TwilioVoice-SwiftVoiceCallKitQuickstart.debug.xcconfig */,
-				F49E3D865BB3A21AF2F20167 /* Pods-TwilioVoice-SwiftVoiceCallKitQuickstart.release.xcconfig */,
+				7A212AF5C67BF2E3AA09CC0E /* Pods-CustomerConcierge.debug.xcconfig */,
+				9B3AB0F167503B99440EF081 /* Pods-CustomerConcierge.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5A1630DFBDB3E71F2A98C375 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A308470707FFA8676E9BA04 /* Pods_CustomerConcierge.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		24BA34321D874AC800B0B4F7 /* CustomerConcierge */ = {
+		24BA34321D874AC800B0B4F7 /* ConciergeTech */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24BA34451D874AC800B0B4F7 /* Build configuration list for PBXNativeTarget "CustomerConcierge" */;
+			buildConfigurationList = 24BA34451D874AC800B0B4F7 /* Build configuration list for PBXNativeTarget "ConciergeTech" */;
 			buildPhases = (
-				CAC44A00388F8D415EB1C3CF /* [CP] Check Pods Manifest.lock */,
+				AD86DE847E5CE6FDBDBE47D2 /* [CP] Check Pods Manifest.lock */,
 				24BA342F1D874AC800B0B4F7 /* Sources */,
 				24BA34301D874AC800B0B4F7 /* Frameworks */,
 				24BA34311D874AC800B0B4F7 /* Resources */,
-				1B46EBFBE06BDBAF652B8EC1 /* [CP] Embed Pods Frameworks */,
-				FB540E88BC21ADCBC6E589E2 /* [CP] Copy Pods Resources */,
+				9636942DCF0AE6E71CA6A55E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CustomerConcierge;
+			name = ConciergeTech;
 			productName = SwiftVoiceCallKitQuickstart;
 			productReference = 24BA34331D874AC800B0B4F7 /* CustomerConcierge.app */;
 			productType = "com.apple.product-type.application";
@@ -156,7 +179,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 24BA342E1D874AC800B0B4F7 /* Build configuration list for PBXProject "CustomerConcierge" */;
+			buildConfigurationList = 24BA342E1D874AC800B0B4F7 /* Build configuration list for PBXProject "ConciergeTech" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -169,7 +192,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				24BA34321D874AC800B0B4F7 /* CustomerConcierge */,
+				24BA34321D874AC800B0B4F7 /* ConciergeTech */,
 			);
 		};
 /* End PBXProject section */
@@ -179,10 +202,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C75F0FB20E9C35400B9A634 /* pencil.png in Resources */,
+				3C75F0FD20E9C3AE00B9A634 /* chat.png in Resources */,
 				3C6BB20120C9AB8100B2A630 /* Settings.bundle in Resources */,
+				3C75F10120E9C7EC00B9A634 /* cancel.png in Resources */,
 				24BA343E1D874AC800B0B4F7 /* Assets.xcassets in Resources */,
-				3C210BD620CF8CF50041E835 /* Launch Screen.storyboard in Resources */,
+				3C75F0F920E54E9B00B9A634 /* home.png in Resources */,
+				3C210BD620CF8CF50041E835 /* Launch.storyboard in Resources */,
 				24BA34491D874BBD00B0B4F7 /* TwilioLogo.png in Resources */,
+				3C75F0F720E54E8F00B9A634 /* online_support.png in Resources */,
 				3C6BB1FE20C990E400B2A630 /* microphone.png in Resources */,
 				3C210BD820CF8D740041E835 /* watson_lg.png in Resources */,
 				3C6BB1FF20C990E400B2A630 /* close.png in Resources */,
@@ -194,25 +222,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1B46EBFBE06BDBAF652B8EC1 /* [CP] Embed Pods Frameworks */ = {
+		9636942DCF0AE6E71CA6A55E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TwilioVoice-SwiftVoiceCallKitQuickstart/Pods-TwilioVoice-SwiftVoiceCallKitQuickstart-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-CustomerConcierge/Pods-CustomerConcierge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${PODS_ROOT}/TwilioVoice/TwilioVoice.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwilioVoice.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TwilioVoice-SwiftVoiceCallKitQuickstart/Pods-TwilioVoice-SwiftVoiceCallKitQuickstart-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CustomerConcierge/Pods-CustomerConcierge-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CAC44A00388F8D415EB1C3CF /* [CP] Check Pods Manifest.lock */ = {
+		AD86DE847E5CE6FDBDBE47D2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -223,26 +253,11 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TwilioVoice-SwiftVoiceCallKitQuickstart-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CustomerConcierge-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FB540E88BC21ADCBC6E589E2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TwilioVoice-SwiftVoiceCallKitQuickstart/Pods-TwilioVoice-SwiftVoiceCallKitQuickstart-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -252,7 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24BA34391D874AC800B0B4F7 /* ViewController.swift in Sources */,
+				3C75F0EB20E1479C00B9A634 /* utils.swift in Sources */,
+				3C75F0ED20E2C3EF00B9A634 /* TabBarController.swift in Sources */,
+				3C75F0EF20E2D02700B9A634 /* mainViewController.swift in Sources */,
+				24BA34391D874AC800B0B4F7 /* helpViewController.swift in Sources */,
 				24BA34371D874AC800B0B4F7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,11 +384,21 @@
 		};
 		24BA34461D874AC800B0B4F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2D032A1E426A1144E100117 /* Pods-TwilioVoice-SwiftVoiceCallKitQuickstart.debug.xcconfig */;
+			baseConfigurationReference = 7A212AF5C67BF2E3AA09CC0E /* Pods-CustomerConcierge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GN328RDGFD;
 				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
+					"\"${PODS_ROOT}/TwilioVoice\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Alamofire\"",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/CustomerConcierge/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -383,11 +411,21 @@
 		};
 		24BA34471D874AC800B0B4F7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F49E3D865BB3A21AF2F20167 /* Pods-TwilioVoice-SwiftVoiceCallKitQuickstart.release.xcconfig */;
+			baseConfigurationReference = 9B3AB0F167503B99440EF081 /* Pods-CustomerConcierge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GN328RDGFD;
 				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire",
+					"\"${PODS_ROOT}/TwilioVoice\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Alamofire\"",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/CustomerConcierge/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -401,7 +439,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		24BA342E1D874AC800B0B4F7 /* Build configuration list for PBXProject "CustomerConcierge" */ = {
+		24BA342E1D874AC800B0B4F7 /* Build configuration list for PBXProject "ConciergeTech" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24BA34431D874AC800B0B4F7 /* Debug */,
@@ -410,7 +448,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24BA34451D874AC800B0B4F7 /* Build configuration list for PBXNativeTarget "CustomerConcierge" */ = {
+		24BA34451D874AC800B0B4F7 /* Build configuration list for PBXNativeTarget "ConciergeTech" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24BA34461D874AC800B0B4F7 /* Debug */,
