@@ -11,8 +11,10 @@
 		<dict>
 			<key>Titles</key>
 			<array>
-				<string>Media &amp; Entertainment</string>
-				<string>Energy &amp; Utilities</string>
+				<string>MegaMedia (M&amp;E)</string>
+				<string>SportsNetwork (M&amp;E)</string>
+				<string>PowerCo (E&amp;U)</string>
+				<string>BigRing (Telco)</string>
 			</array>
 			<key>Type</key>
 			<string>PSMultiValueSpecifier</string>
@@ -20,9 +22,11 @@
 			<array>
 				<string>0</string>
 				<string>1</string>
+				<string>2</string>
+				<string>3</string>
 			</array>
 			<key>Title</key>
-			<string>Industry</string>
+			<string>Demo</string>
 			<key>Key</key>
 			<string>subIndustry</string>
 			<key>DefaultValue</key>

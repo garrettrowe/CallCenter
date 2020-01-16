@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/garrettrowe/Box Sync/Development/voice-quickstart-swift/CustomerConcierge.xcodeproj">
+      location = "group:/Users/garrettrowe/Box Sync/Development/Callcenter/callcenter-ios-app/CustomerConcierge.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

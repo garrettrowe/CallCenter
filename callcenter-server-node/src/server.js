@@ -4,7 +4,7 @@ const AccessToken = require('twilio').jwt.AccessToken;
 const VoiceGrant = AccessToken.VoiceGrant;
 const VoiceResponse = require('twilio').twiml.VoiceResponse;
 const defaultIdentity = 'alice';
-var callerNumber = '18587794426';
+var agentNumber = '18587794426';
 var agentmapping = {};
 
 
@@ -175,7 +175,7 @@ function makeCall(request, response) {
   
   const voiceResponse = new VoiceResponse();
   const dial = voiceResponse.dial({ringTone : "none"});
-  dial.conference(from,{endConferenceOnExit: true,startConferenceOnEnter: true, beep: false, waitMethod: 'GET', waitUrl: 'https://conciergevoiceserver.mybluemix.net/wav.wav'});
+  dial.conference(from,{endConferenceOnExit: true,startConferenceOnEnter: true, beep: false, waitMethod: 'GET', waitUrl: 'https://conciergevoiceserver.mybluemix.net/wav.wav', statusCallback: 'https://customerconcierge.mybluemix.net/speakerCallback?from='+from, statusCallbackEvent: "speaker"});
   callF(to, from, agent, false);
   
   console.log('Response:' + voiceResponse.toString());

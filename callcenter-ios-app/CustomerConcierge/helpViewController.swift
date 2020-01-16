@@ -1,8 +1,5 @@
 //
-//  ViewController.swift
-//  Twilio Voice with CallKit Quickstart - Swift
-//
-//  Copyright © 2016 Twilio, Inc. All rights reserved.
+//  helpViewController.swift
 //
 
 import UIKit
@@ -10,18 +7,12 @@ import AVFoundation
 import PushKit
 import CallKit
 import TwilioVoice
+import Alamofire
 
-let baseURLString = "https://conciergevoiceserver.mybluemix.net"
-let accessTokenEndpoint = "/accessToken"
-var identity = ""
-var agent = ""
-var defaults = UserDefaults.standard
-var yourPhone = ""
-var agentPhone = ""
-var industry = ""
-let uuid = UUID().uuidString
+
 
 class ViewController: UIViewController, PKPushRegistryDelegate, TVONotificationDelegate, TVOCallDelegate, CXProviderDelegate, UITextFieldDelegate, UIWebViewDelegate {
+
 
     @IBOutlet weak var placeCallButton: UIButton!
     @IBOutlet weak var iconView: UIImageView!
@@ -31,20 +22,9 @@ class ViewController: UIViewController, PKPushRegistryDelegate, TVONotificationD
     @IBOutlet weak var watsonWeb: UIWebView!
     @IBOutlet weak var titleLabel: UILabel!
     
-    func defaultsChanged(notification:NSNotification){
-        if let newDefaults = notification.object as? UserDefaults {
-            yourPhone = newDefaults.string(forKey: "yourPhone")!.trim()
-            agentPhone = newDefaults.string(forKey: "agentPhone")!.trim()
-            industry = newDefaults.string(forKey: "subIndustry")!.trim()
-            loadPage()
-        }
-    }
-    func loadPage() {
-        NSLog("Loading Web Content")
-        let url = URL(string: "https://customerconcierge.mybluemix.net/demo?yourPhone=" + yourPhone + "&agentPhone=" + agentPhone + "&industry=" + industry)!
-        let urlRequest: URLRequest = URLRequest(url: url)
-            self.watsonWeb!.loadRequest(urlRequest)
-    }
+    @IBOutlet weak var chatButton: UIButton!
+    @IBOutlet weak var chatBox: UITextField!
+    
     
     var deviceTokenString:String?
 
@@ -59,7 +39,15 @@ class ViewController: UIViewController, PKPushRegistryDelegate, TVONotificationD
     let callKitProvider:CXProvider
     let callKitCallController:CXCallController
     
-    
+    @objc func cloadPage(_ notification: Notification) {
+        loadPage()
+    }
+    func loadPage() {
+        NSLog("Loading Web Content for " + yourPhone)
+        let url = URL(string: "https://customerconcierge.mybluemix.net/demo?ua=iphone&yourPhone=" + yourPhone + "&agentPhone=" + agentPhone + "&industry=" + industry)!
+        let urlRequest: URLRequest = URLRequest(url: url)
+        self.watsonWeb!.loadRequest(urlRequest)
+    }
     
     
     required init?(coder aDecoder: NSCoder) {
@@ -72,10 +60,10 @@ class ViewController: UIViewController, PKPushRegistryDelegate, TVONotificationD
         if let callKitIcon = UIImage(named: "iconMask80") {
             configuration.iconTemplateImageData = UIImagePNGRepresentation(callKitIcon)
         }
-
+        
         callKitProvider = CXProvider(configuration: configuration)
         callKitCallController = CXCallController()
-
+        
         super.init(coder: aDecoder)
         
         callKitProvider.setDelegate(self, queue: nil)
@@ -88,24 +76,42 @@ class ViewController: UIViewController, PKPushRegistryDelegate, TVONotificationD
         // CallKit has an odd API contract where the developer must call invalidate or the CXProvider is leaked.
         callKitProvider.invalidate()
     }
+    
+    func webView(_ watsonWeb: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        switch navigationType {
+        case .linkClicked:
+            guard let url = request.url else { return true }
+            
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+            return false
+        default:
+            // Handle other navigation types...
+            return true
+        }
+    }
+    
     func webViewDidFinishLoad(_ watsonWeb: UIWebView) {
-        
         let scrollableSize = CGSize(width: view.frame.size.width-30, height: watsonWeb.scrollView.contentSize.height)
         self.watsonWeb?.scrollView.contentSize = scrollableSize
         self.watsonWeb?.scrollView.bounces = false
         
     }
     override func viewDidLoad() {
-        yourPhone = defaults.string(forKey: "yourPhone")!.trim()
-        agentPhone = defaults.string(forKey: "agentPhone")!.trim()
-        industry = defaults.string(forKey: "subIndustry")!.trim()
+        super.viewDidLoad()
         watsonWeb?.delegate = self
+        watsonWeb.allowsInlineMediaPlayback = true
         loadPage()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.defaultsChanged), name: UserDefaults.didChangeNotification, object: nil)
         toggleUIState(isEnabled: true, showCallControl: false)
         self.placeCallButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
-        super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(cloadPage(_:)),name:NSNotification.Name(rawValue: "helpPage"), object: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -164,6 +170,7 @@ class ViewController: UIViewController, PKPushRegistryDelegate, TVONotificationD
     
     func getService(_ url : String) -> String? {
         var retval = ""
+        
         var response: URLResponse?
         let url = URL(string: url)!
         let request: URLRequest = URLRequest(url: url)
@@ -182,7 +189,10 @@ class ViewController: UIViewController, PKPushRegistryDelegate, TVONotificationD
                 retval = String(data: decodedData, encoding: .utf8)!
             }
         }
+            
         return retval
+ 
+        
     }
     
     @IBAction func muteSwitchToggled(_ sender: UISwitch) {
@@ -545,5 +555,26 @@ class ViewController: UIViewController, PKPushRegistryDelegate, TVONotificationD
         call = self.callInvite?.accept(with: self)
         self.callInvite = nil
         self.callKitCompletionCallback = completionHandler
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
+        textField.resignFirstResponder()
+        submitChat()
+        return true
+    }
+    
+    @IBAction func submitChat() {
+        if (chatBox.text != ""){
+            let parameters: [String: String] = [
+                "text" : chatBox.text!,
+                "user" : yourPhone,
+                "industry": industry
+            ]
+            Alamofire.request("https://customerconcierge.mybluemix.net/chat", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+                .responseString { response in
+                    if (response.result.isSuccess){
+                        self.chatBox.text = ""
+                    }
+            }
+        }
     }
 }
