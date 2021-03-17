@@ -131,7 +131,7 @@ async function callF(to, from, agent, callback) {
       url: url,
       to: to,
       from: from,
-      statusCallback: 'https://customerconcierge.mybluemix.net/agentCallback?from='+from,
+      statusCallback: 'https://localhost/agentCallback?from='+from,
       statusCallbackEvent: ["answered", "completed"],
       statusCallbackMethod: 'POST'
     });
